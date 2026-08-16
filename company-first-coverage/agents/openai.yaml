@@ -1,0 +1,7 @@
+interface:
+  display_name: "上市公司首次覆盖报告"
+  short_description: "从本地材料和公开来源生成完整、可验证的上市公司首次覆盖报告"
+  default_prompt: "Use $company-first-coverage to audit all accessible materials and produce a complete, evidence-backed first-coverage report for the specified listed company."
+
+policy:
+  allow_implicit_invocation: true
