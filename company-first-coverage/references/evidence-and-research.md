@@ -2,14 +2,27 @@
 
 ## Contents
 
-1. Material coverage audit
-2. Evidence hierarchy
-3. Global source audit
-4. New-product evidence ladder
-5. Financial and valuation freshness
-6. Tracking and falsification
+1. Source Record audit chain
+2. Material coverage audit
+3. Evidence hierarchy
+4. Global source audit
+5. New-product evidence ladder
+6. Financial and valuation freshness
+7. Tracking and falsification
 
-## 1. Material Coverage Audit
+## 1. Source Record Audit Chain
+
+研究链条统一为：
+
+`source_record → claim_id/causal_node → 综合结论 → 反证条件 → monitoring_contract`
+
+每条 source record 至少记录：稳定唯一的 `source_id`；标题、发布主体、原始 URL 或本地路径、发布日期、取得日期、资料类型和证据层级；页码、章节、表格、时间戳等原文定位；统计期间、单位、币种、分母、样本和定义；能证明什么、不能证明什么、关联 claim 以及支持/反对/限定关系；`active`、`stale`、`superseded`、`invalidated`、`archived` 等状态及变更理由。
+
+原始资料与派生结论分离保存，不静默覆盖历史。同一原始来源被多次转述时仍只算一个证据根节点。关键 claim 无法回到 source record，或来源与 claim 的期间、单位、分母、对象不匹配时，必须降级为“待确认”。
+
+交付前执行双向审计：从每条核心结论反查 claim 与 source record；再从每条高相关 source record 正向检查采用、未采用、冲突或降级理由。
+
+## 2. Material Coverage Audit
 
 完整新建、完整重写或资料文件夹有明显增量时，写作前必须完成资料覆盖审计。
 
@@ -21,7 +34,7 @@
 
 语音转写中的公司名、型号、金额、增速、销量、时间范围和客户关系必须与一手资料或独立二手来源复核。无法确定期间、分母或对象的数字不得使用。
 
-## 2. Evidence Hierarchy
+## 3. Evidence Hierarchy
 
 ### 一手证据
 
@@ -39,7 +52,7 @@
 
 公开榜单和测评必须解释测评原理、任务范围和不覆盖的内容。优先选择与公司商业化最相关的 Coding、Agent、WebDev、长文档或行业工作流子榜。榜单只能证明能力、偏好或性价比，不能证明订单、收入、留存或毛利率。
 
-## 3. Global Source Audit
+## 4. Global Source Audit
 
 搜索范围至少包括：
 
@@ -53,7 +66,7 @@
 
 只有在检查产品目录、新闻/投资者关系、开发者资料和主要合作伙伴后，才能写“截至某日未找到公开证据”。公开证据缺失不等于产品或客户不存在。
 
-## 4. New-Product Evidence Ladder
+## 5. New-Product Evidence Ladder
 
 对处于发布、导入或放量阶段的新产品，按证据阶梯逐级判断：
 
@@ -67,7 +80,7 @@
 
 不得把较早阶段改写成较晚阶段。多款新品分别建立证据阶梯，不能用一款产品的量产状态抬高另一款。
 
-## 5. Financial and Valuation Freshness
+## 6. Financial and Valuation Freshness
 
 - 历史财务优先公司定期报告和公告，并核对单位、币种、会计期和重述口径。
 - 财务预测与估值只使用距写作日不超过 6 个月的合格资料。
@@ -75,7 +88,7 @@
 - 缺少合格资料时保留财务质量分析，写明“待确认：缺少近半年财务预测/估值资料”。
 - 不得自行捏造盈利预测、目标价或倍数。
 
-## 6. Tracking and Falsification
+## 7. Tracking and Falsification
 
 把风险转成可观察信号：
 
